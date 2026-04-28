@@ -46,6 +46,10 @@ src/
 
 ## ▶️ How to Run
 
+### Fill Excel file
+Fill the excel file "parts_list.xlsx" first with the instructions found inside.
+The script is going to read data from this file.
+
 ### Inside profile_nesting folder:
 
 ```bash
@@ -55,14 +59,7 @@ py -m src.main
 ---
 
 ## 📥 Excel Format
-
-### Sheet: `Parts`
-
-| item | length | qty | profile |
-| ---- | ------ | --- | ------- |
-| 1    | 48.50  | 2   | PTR 2x2 |
-
----
+You can use any excel file as long as you use this format:
 
 ### Sheet: `Materials`
 
@@ -71,6 +68,16 @@ py -m src.main
 | PTR 2x2 | 120    |
 
 ---
+
+### Sheet: `Parts`
+
+| item | length | qty | profile |
+| ---- | ------ | --- | ------- |
+| 1    | 48.50  | 2   | PTR 2x2 |
+
+Note: string inside "profile" should match "name" on Materials
+---
+
 
 ## ⚙️ Program Flow
 
@@ -114,6 +121,7 @@ The implemented algorithm follows a **greedy (First Fit Decreasing)** approach:
 ### Sheet: `Nesting_summary`
 
 | profile | total_bars | total_used | total_waste | utilization_% |
+| ------- | ---------- | ---------- | ----------- | ------------- |
 | PTR 2x2 |     1      |     97     |     23      |     80.83     |
 
 ---
