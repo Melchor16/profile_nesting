@@ -4,3 +4,4 @@ __pycache__/
 *.xls
 *.xlsx
 !parts_list.py
+*.zip
