@@ -1,4 +1,6 @@
 # Python cache
 __pycache__/
 *.pyc
-pruebas.py
+*.xls
+*.xlsx
+!parts_list.py

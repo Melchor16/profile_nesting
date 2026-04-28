@@ -2,8 +2,8 @@ import pandas as pd
 from src.models.Parts import Part
 from src.models.Profiles import Profile
 
-parts_sheet = "Sheet1"
-profiles_sheet = "Sheet2"
+parts_sheet = "Parts"
+profiles_sheet = "Materials"
     
 def read_parts(file_path, sheet = parts_sheet):
 
@@ -11,7 +11,6 @@ def read_parts(file_path, sheet = parts_sheet):
         file_path, 
         sheet_name=sheet, 
         usecols=["item", "length", "qty", "profile"],
-        dtype={"item": int, "length": float, "qty": int, "profile": str},
         na_values=["-", "NA"]
         )
 
