@@ -18,7 +18,7 @@ def read_parts(file_path, sheet = parts_sheet):
     new_file = new_file.dropna(subset = ["item", "length", "qty", "profile"] )
 
     new_file["item"] = new_file["item"].astype(int)
-    new_file["length"] = new_file["length"].astype(int)
+    new_file["length"] = new_file["length"].astype(float)
     new_file["qty"] = new_file["qty"].astype(int)
     new_file["profile"] = new_file["profile"].astype(str)
 
@@ -39,7 +39,7 @@ def read_profiles(file_path, sheet = profiles_sheet):
     temporal_nm = temporal_nm.dropna(subset = ["name", "length"] )
 
     temporal_nm["name"] = temporal_nm["name"].astype(str)
-    temporal_nm["length"] = temporal_nm["length"].astype(int)
+    temporal_nm["length"] = temporal_nm["length"].astype(float)
 
     profiles = [Profile.from_row(row) for _, row in temporal_nm.iterrows()]
 
