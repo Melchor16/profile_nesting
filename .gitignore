@@ -3,5 +3,5 @@ __pycache__/
 *.pyc
 *.xls
 *.xlsx
-!parts_list.py
+!parts_list.xlsx
 *.zip
